@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::post('/contas', 'ContasControlller@cadastrarConta');
+
+Route::post('/contas', 'ContasControlller@store');
+Route::patch('/contas/{conta}', 'ContasControlller@update');
+Route::delete('/contas/{conta}', 'ContasControlller@destroy');
